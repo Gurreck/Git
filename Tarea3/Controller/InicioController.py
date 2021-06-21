@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'IniciobnmzlE.ui'
+## Form generated from reading UI file 'InicioYWQvWy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -11,7 +11,6 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
 
 class Ui_Git(object):
     def setupUi(self, Git):
@@ -141,18 +140,18 @@ class Ui_Git(object):
         self.stackedWidget.addWidget(self.page_registro)
         self.page_adminCreaRepo = QWidget()
         self.page_adminCreaRepo.setObjectName(u"page_adminCreaRepo")
-        self.btn_iniciarSesion_2 = QPushButton(self.page_adminCreaRepo)
-        self.btn_iniciarSesion_2.setObjectName(u"btn_iniciarSesion_2")
-        self.btn_iniciarSesion_2.setGeometry(QRect(370, 300, 281, 31))
-        self.btn_iniciarSesion_2.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_crearRepoPrincipal = QPushButton(self.page_adminCreaRepo)
+        self.btn_crearRepoPrincipal.setObjectName(u"btn_crearRepoPrincipal")
+        self.btn_crearRepoPrincipal.setGeometry(QRect(370, 300, 281, 31))
+        self.btn_crearRepoPrincipal.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_3 = QPushButton(self.page_adminCreaRepo)
-        self.btn_iniciarSesion_3.setObjectName(u"btn_iniciarSesion_3")
-        self.btn_iniciarSesion_3.setGeometry(QRect(370, 370, 281, 31))
-        self.btn_iniciarSesion_3.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_administrarRepositorioPrincipal = QPushButton(self.page_adminCreaRepo)
+        self.btn_administrarRepositorioPrincipal.setObjectName(u"btn_administrarRepositorioPrincipal")
+        self.btn_administrarRepositorioPrincipal.setGeometry(QRect(370, 370, 281, 31))
+        self.btn_administrarRepositorioPrincipal.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
@@ -165,140 +164,140 @@ class Ui_Git(object):
 "font-size: 38px;\n"
 "font-weight: bold;")
         self.stackedWidget.addWidget(self.page_adminCreaRepo)
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.label_8 = QLabel(self.page)
+        self.page_userCreaRepo = QWidget()
+        self.page_userCreaRepo.setObjectName(u"page_userCreaRepo")
+        self.label_8 = QLabel(self.page_userCreaRepo)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(430, 140, 171, 41))
         self.label_8.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_4 = QPushButton(self.page)
-        self.btn_iniciarSesion_4.setObjectName(u"btn_iniciarSesion_4")
-        self.btn_iniciarSesion_4.setGeometry(QRect(380, 260, 271, 31))
-        self.btn_iniciarSesion_4.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_crearRepoUser = QPushButton(self.page_userCreaRepo)
+        self.btn_crearRepoUser.setObjectName(u"btn_crearRepoUser")
+        self.btn_crearRepoUser.setGeometry(QRect(380, 260, 271, 31))
+        self.btn_crearRepoUser.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_5 = QPushButton(self.page)
-        self.btn_iniciarSesion_5.setObjectName(u"btn_iniciarSesion_5")
-        self.btn_iniciarSesion_5.setGeometry(QRect(340, 350, 341, 31))
-        self.btn_iniciarSesion_5.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_administrarCarpetasUser = QPushButton(self.page_userCreaRepo)
+        self.btn_administrarCarpetasUser.setObjectName(u"btn_administrarCarpetasUser")
+        self.btn_administrarCarpetasUser.setGeometry(QRect(340, 350, 341, 31))
+        self.btn_administrarCarpetasUser.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.label_9 = QLabel(self.page_2)
+        self.stackedWidget.addWidget(self.page_userCreaRepo)
+        self.page_carpetasUser = QWidget()
+        self.page_carpetasUser.setObjectName(u"page_carpetasUser")
+        self.label_9 = QLabel(self.page_carpetasUser)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(440, 60, 171, 41))
         self.label_9.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page_2)
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.label_10 = QLabel(self.page_3)
+        self.stackedWidget.addWidget(self.page_carpetasUser)
+        self.page_administrarCarpetasUser = QWidget()
+        self.page_administrarCarpetasUser.setObjectName(u"page_administrarCarpetasUser")
+        self.label_10 = QLabel(self.page_administrarCarpetasUser)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setGeometry(QRect(280, 150, 471, 41))
         self.label_10.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_6 = QPushButton(self.page_3)
-        self.btn_iniciarSesion_6.setObjectName(u"btn_iniciarSesion_6")
-        self.btn_iniciarSesion_6.setGeometry(QRect(420, 480, 211, 31))
-        self.btn_iniciarSesion_6.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_asignarPermisos = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_asignarPermisos.setObjectName(u"btn_asignarPermisos")
+        self.btn_asignarPermisos.setGeometry(QRect(420, 480, 211, 31))
+        self.btn_asignarPermisos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_7 = QPushButton(self.page_3)
-        self.btn_iniciarSesion_7.setObjectName(u"btn_iniciarSesion_7")
-        self.btn_iniciarSesion_7.setGeometry(QRect(420, 280, 211, 31))
-        self.btn_iniciarSesion_7.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_commit = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_commit.setObjectName(u"btn_commit")
+        self.btn_commit.setGeometry(QRect(420, 280, 211, 31))
+        self.btn_commit.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_8 = QPushButton(self.page_3)
-        self.btn_iniciarSesion_8.setObjectName(u"btn_iniciarSesion_8")
-        self.btn_iniciarSesion_8.setGeometry(QRect(420, 340, 211, 31))
-        self.btn_iniciarSesion_8.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_update = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setGeometry(QRect(420, 340, 211, 31))
+        self.btn_update.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_iniciarSesion_9 = QPushButton(self.page_3)
-        self.btn_iniciarSesion_9.setObjectName(u"btn_iniciarSesion_9")
-        self.btn_iniciarSesion_9.setGeometry(QRect(420, 410, 211, 31))
-        self.btn_iniciarSesion_9.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_recuperarArchivos = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_recuperarArchivos.setObjectName(u"btn_recuperarArchivos")
+        self.btn_recuperarArchivos.setGeometry(QRect(420, 410, 211, 31))
+        self.btn_recuperarArchivos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page_3)
-        self.page_5 = QWidget()
-        self.page_5.setObjectName(u"page_5")
-        self.label_13 = QLabel(self.page_5)
+        self.stackedWidget.addWidget(self.page_administrarCarpetasUser)
+        self.page_recuperacionArchivos = QWidget()
+        self.page_recuperacionArchivos.setObjectName(u"page_recuperacionArchivos")
+        self.label_13 = QLabel(self.page_recuperacionArchivos)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(280, 50, 461, 41))
         self.label_13.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page_5)
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.label_11 = QLabel(self.page_4)
+        self.stackedWidget.addWidget(self.page_recuperacionArchivos)
+        self.page_asignarPermisosUser = QWidget()
+        self.page_asignarPermisosUser.setObjectName(u"page_asignarPermisosUser")
+        self.label_11 = QLabel(self.page_asignarPermisosUser)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setGeometry(QRect(280, 160, 481, 51))
         self.label_11.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.text_password_2 = QLineEdit(self.page_4)
-        self.text_password_2.setObjectName(u"text_password_2")
-        self.text_password_2.setGeometry(QRect(490, 290, 191, 31))
-        self.text_password_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+        self.text_usuarioPermiso = QLineEdit(self.page_asignarPermisosUser)
+        self.text_usuarioPermiso.setObjectName(u"text_usuarioPermiso")
+        self.text_usuarioPermiso.setGeometry(QRect(490, 290, 191, 31))
+        self.text_usuarioPermiso.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "font-family: ebrima;\n"
 "color:rgb(0, 0, 0);\n"
 "font-size: 18px;\n"
 "font-weight: bold;")
-        self.label_12 = QLabel(self.page_4)
+        self.label_12 = QLabel(self.page_asignarPermisosUser)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(380, 290, 111, 21))
         self.label_12.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 24px;\n"
 "font-weight: bold;")
-        self.checkBox_3 = QCheckBox(self.page_4)
-        self.checkBox_3.setObjectName(u"checkBox_3")
-        self.checkBox_3.setGeometry(QRect(370, 380, 81, 21))
-        self.checkBox_3.setStyleSheet(u"font-family: ebrima;\n"
+        self.check_crear = QCheckBox(self.page_asignarPermisosUser)
+        self.check_crear.setObjectName(u"check_crear")
+        self.check_crear.setGeometry(QRect(370, 380, 81, 21))
+        self.check_crear.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 20px;\n"
 "font-weight: bold;")
-        self.checkBox_4 = QCheckBox(self.page_4)
-        self.checkBox_4.setObjectName(u"checkBox_4")
-        self.checkBox_4.setGeometry(QRect(510, 380, 121, 21))
-        self.checkBox_4.setStyleSheet(u"font-family: ebrima;\n"
+        self.check_modificar = QCheckBox(self.page_asignarPermisosUser)
+        self.check_modificar.setObjectName(u"check_modificar")
+        self.check_modificar.setGeometry(QRect(510, 380, 121, 21))
+        self.check_modificar.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 20px;\n"
 "font-weight: bold;")
-        self.checkBox_5 = QCheckBox(self.page_4)
-        self.checkBox_5.setObjectName(u"checkBox_5")
-        self.checkBox_5.setGeometry(QRect(680, 380, 121, 21))
-        self.checkBox_5.setStyleSheet(u"font-family: ebrima;\n"
+        self.check_eliminar = QCheckBox(self.page_asignarPermisosUser)
+        self.check_eliminar.setObjectName(u"check_eliminar")
+        self.check_eliminar.setGeometry(QRect(680, 380, 121, 21))
+        self.check_eliminar.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 20px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page_4)
+        self.stackedWidget.addWidget(self.page_asignarPermisosUser)
         Git.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(Git)
         self.menubar.setObjectName(u"menubar")
@@ -310,7 +309,7 @@ class Ui_Git(object):
 
         self.retranslateUi(Git)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Git)
@@ -328,23 +327,23 @@ class Ui_Git(object):
         self.label_6.setText(QCoreApplication.translate("Git", u"Registro", None))
         self.btn_registrarse.setText(QCoreApplication.translate("Git", u"Registrarse", None))
         self.btn_atrasRegistro.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
-        self.btn_iniciarSesion_2.setText(QCoreApplication.translate("Git", u"Crear Repositorio Principal", None))
-        self.btn_iniciarSesion_3.setText(QCoreApplication.translate("Git", u"Administrar Repositorio", None))
+        self.btn_crearRepoPrincipal.setText(QCoreApplication.translate("Git", u"Crear Repositorio Principal", None))
+        self.btn_administrarRepositorioPrincipal.setText(QCoreApplication.translate("Git", u"Administrar Repositorio", None))
         self.label_7.setText(QCoreApplication.translate("Git", u"Opciones", None))
         self.label_8.setText(QCoreApplication.translate("Git", u"Opciones", None))
-        self.btn_iniciarSesion_4.setText(QCoreApplication.translate("Git", u"Crear carpeta repositorio", None))
-        self.btn_iniciarSesion_5.setText(QCoreApplication.translate("Git", u"Administrar carpetas", None))
+        self.btn_crearRepoUser.setText(QCoreApplication.translate("Git", u"Crear carpeta repositorio", None))
+        self.btn_administrarCarpetasUser.setText(QCoreApplication.translate("Git", u"Administrar carpetas", None))
         self.label_9.setText(QCoreApplication.translate("Git", u"Carpetas", None))
         self.label_10.setText(QCoreApplication.translate("Git", u"Administracion de carpeta", None))
-        self.btn_iniciarSesion_6.setText(QCoreApplication.translate("Git", u"Asignar permisos", None))
-        self.btn_iniciarSesion_7.setText(QCoreApplication.translate("Git", u"Commit", None))
-        self.btn_iniciarSesion_8.setText(QCoreApplication.translate("Git", u"Update", None))
-        self.btn_iniciarSesion_9.setText(QCoreApplication.translate("Git", u"Recuperar archivos", None))
+        self.btn_asignarPermisos.setText(QCoreApplication.translate("Git", u"Asignar permisos", None))
+        self.btn_commit.setText(QCoreApplication.translate("Git", u"Commit", None))
+        self.btn_update.setText(QCoreApplication.translate("Git", u"Update", None))
+        self.btn_recuperarArchivos.setText(QCoreApplication.translate("Git", u"Recuperar archivos", None))
         self.label_13.setText(QCoreApplication.translate("Git", u"Recuperaci\u00f3n de archivos", None))
         self.label_11.setText(QCoreApplication.translate("Git", u"Asignar permisos a usuario", None))
         self.label_12.setText(QCoreApplication.translate("Git", u"Usuario:", None))
-        self.checkBox_3.setText(QCoreApplication.translate("Git", u"Crear", None))
-        self.checkBox_4.setText(QCoreApplication.translate("Git", u"Modificar", None))
-        self.checkBox_5.setText(QCoreApplication.translate("Git", u"Eliminar", None))
+        self.check_crear.setText(QCoreApplication.translate("Git", u"Crear", None))
+        self.check_modificar.setText(QCoreApplication.translate("Git", u"Modificar", None))
+        self.check_eliminar.setText(QCoreApplication.translate("Git", u"Eliminar", None))
     # retranslateUi
 

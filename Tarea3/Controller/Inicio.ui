@@ -30,7 +30,7 @@
      <string notr="true">background-color: rgb(32, 73, 116)</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_inicio">
      <property name="autoFillBackground">
@@ -305,7 +305,7 @@ font-weight: bold;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="page_adminCreaRepo">
-     <widget class="QPushButton" name="btn_iniciarSesion_2">
+     <widget class="QPushButton" name="btn_crearRepoPrincipal">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -325,7 +325,7 @@ font-weight: bold;</string>
        <string>Crear Repositorio Principal</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_3">
+     <widget class="QPushButton" name="btn_administrarRepositorioPrincipal">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -365,7 +365,7 @@ font-weight: bold;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page">
+    <widget class="QWidget" name="page_userCreaRepo">
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
@@ -385,7 +385,7 @@ font-weight: bold;</string>
        <string>Opciones</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_4">
+     <widget class="QPushButton" name="btn_crearRepoUser">
       <property name="geometry">
        <rect>
         <x>380</x>
@@ -405,7 +405,7 @@ font-weight: bold;</string>
        <string>Crear carpeta repositorio</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_5">
+     <widget class="QPushButton" name="btn_administrarCarpetasUser">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -426,7 +426,7 @@ font-weight: bold;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2">
+    <widget class="QWidget" name="page_carpetasUser">
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
@@ -447,7 +447,7 @@ font-weight: bold;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_3">
+    <widget class="QWidget" name="page_administrarCarpetasUser">
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
@@ -467,7 +467,7 @@ font-weight: bold;</string>
        <string>Administracion de carpeta</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_6">
+     <widget class="QPushButton" name="btn_asignarPermisos">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -487,7 +487,7 @@ font-weight: bold;</string>
        <string>Asignar permisos</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_7">
+     <widget class="QPushButton" name="btn_commit">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -507,7 +507,7 @@ font-weight: bold;</string>
        <string>Commit</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_8">
+     <widget class="QPushButton" name="btn_update">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -527,7 +527,7 @@ font-weight: bold;</string>
        <string>Update</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_iniciarSesion_9">
+     <widget class="QPushButton" name="btn_recuperarArchivos">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -548,7 +548,7 @@ font-weight: bold;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_5">
+    <widget class="QWidget" name="page_recuperacionArchivos">
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
@@ -569,7 +569,7 @@ font-weight: bold;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_4">
+    <widget class="QWidget" name="page_asignarPermisosUser">
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
@@ -589,7 +589,7 @@ font-weight: bold;</string>
        <string>Asignar permisos a usuario</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="text_password_2">
+     <widget class="QLineEdit" name="text_usuarioPermiso">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -625,7 +625,7 @@ font-weight: bold;</string>
        <string>Usuario:</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_3">
+     <widget class="QCheckBox" name="check_crear">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -644,7 +644,7 @@ font-weight: bold;</string>
        <string>Crear</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_4">
+     <widget class="QCheckBox" name="check_modificar">
       <property name="geometry">
        <rect>
         <x>510</x>
@@ -663,7 +663,7 @@ font-weight: bold;</string>
        <string>Modificar</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_5">
+     <widget class="QCheckBox" name="check_eliminar">
       <property name="geometry">
        <rect>
         <x>680</x>
