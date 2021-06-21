@@ -30,6 +30,10 @@ win.btn_registrarse.clicked.connect(lambda: usuarios.login.registrarUsuario(win.
 win.btn_iniciarSesion.clicked.connect(lambda: autenficarUsuario(win.text_usuario.text(),win.text_password.text()))
 
 win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta.carpeta.crearCapeta())
+win.btn_crearRepoUser.clicked.connect(lambda:carpeta.carpeta.crearCapetaUsuario(win.text_usuario.text()))
+
+win.btn_administrarCarpetasUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
+win.btn_commit.clicked.connect(lambda:carpeta.carpeta.commit(win.text_usuario.text()))
 win.show()
 
 sys.exit(app.exec())
