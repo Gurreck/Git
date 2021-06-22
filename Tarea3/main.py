@@ -2,7 +2,7 @@ from PyQt5 import QtWidgets, uic
 
 import sys
 import Funciones.login as usuarios
-import Funciones.carpetas as carpeta
+from Funciones.carpetas import carpeta
 import json
 import Funciones.Mensajes as sms
 from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
@@ -27,7 +27,7 @@ def autenficarUsuario(nombre, password):
                 banderaAutenticado= True
                 break
         if(banderaAutenticado == False):
-            sms.MessageBox(QtWidgets.QWidget).show_message(1)
+            sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Usuario o contraseña incorrectos')
     
     
 win.btn_registrar.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_registro))
@@ -36,13 +36,13 @@ win.btn_atrasRegistro.clicked.connect(lambda: win.stackedWidget.setCurrentWidget
 win.btn_registrarse.clicked.connect(lambda: usuarios.login.registrarUsuario(win.text_usuarioRegistro.text(),win.text_passwordRegistro.text()))
 win.btn_iniciarSesion.clicked.connect(lambda: autenficarUsuario(win.text_usuario.text(),win.text_password.text()))
 
-win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta.carpeta.crearCapeta())
-win.btn_crearRepoUser.clicked.connect(lambda:carpeta.carpeta.crearCapetaUsuario(win.text_usuario.text()))
+win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta.crearCapeta())
+win.btn_crearRepoUser.clicked.connect(lambda:carpeta.crearCapetaUsuario(carpeta,win.text_usuario.text()))
 
 win.btn_administrarCarpetasUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
-win.btn_commit.clicked.connect(lambda:carpeta.carpeta.commit(win.text_usuario.text()))
+win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,win.text_usuario.text()))
 win.btn_update.clicked.connect(lambda: archivo.App(win).getFileName(win.text_usuario.text()))
-win.show()
+win.show() 
 
 sys.exit(app.exec())
 

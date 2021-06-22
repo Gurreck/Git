@@ -28,8 +28,8 @@ class MessageBox(QtWidgets.QWidget):# Heredado de la clase padre QtWidgets.QWidg
         self.tipo = 0
         
 
-    def show_message(self,tipo):
+    def show_message(self,tipo,titulo,mensaje):
             if tipo == 1:
-              QtWidgets.QMessageBox.critical(self, "Error", "Ususario o contraseña incorrectos")
+              QtWidgets.QMessageBox.critical(self, titulo, mensaje)
             elif tipo == 2:
-              QtWidgets.QMessageBox.information(self, "Usuario registrado", "Ususario registrado con exito") 
+              QtWidgets.QMessageBox.information(self, titulo, mensaje) 

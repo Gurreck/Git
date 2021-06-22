@@ -4,7 +4,7 @@ import shutil
 import Funciones.login as log
 class carpeta:
     
-    def crearCapetaUsuario(nombre):
+    def crearCapetaUsuario(self,nombre):
         directorio = 'repositorio/'+nombre
         directorio_permanente = directorio+"/permanente"
         directorio_temporal = directorio+"/temporal"
@@ -30,7 +30,7 @@ class carpeta:
         print(directorio_temporal)
         
         directorio_permanente = 'repositorio/'+nombre+'/permanente/commit'+str(log.login.verificaNumeroCommit(nombre))
-        self.crearCarpeta(directorio_permanente)
+        self.crearCarpeta(self,directorio_permanente)
         print(directorio_permanente)
         contenidos=os.listdir(directorio_temporal)
         for elemento in contenidos:
