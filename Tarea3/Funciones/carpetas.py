@@ -4,7 +4,7 @@ import shutil
 class carpeta:
     def crearCapeta():
         directorio = 'repositorio'
-        print("crenado")
+        print("creado")
         try:
             print("Se creo el repositorio")
             os.mkdir(directorio)
@@ -45,3 +45,12 @@ class carpeta:
             except:
                 print("Falló")
                 print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
+    def cargarArchivo(nombre, direccion_origen):
+        print("entro")
+        directorio_temporal = 'repositorio/'+nombre+'/temporal'
+        try:
+            shutil.copy(direccion_origen, directorio_temporal)
+            print("Correcto")
+        except:
+            print("Falló")
+            print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
