@@ -2,6 +2,7 @@ import json
 import sys
 import Funciones.Mensajes as sms
 from PyQt5 import QtWidgets
+import os
 data = {}
 data['usuarios'] = []
 class login:
@@ -15,7 +16,8 @@ class login:
             global data
             data['usuarios'].append({
                 'nombre' : nombre,
-                'password': password
+                'password': password,
+                'numero': 1
             })
             with open('Usuarios/usuarios.txt', 'w') as outfile:
                 outfile.write(json.dumps(data))
@@ -29,3 +31,17 @@ class login:
                     break
                 else:
                     print("No autenticado")
+    def verificaNumeroCommit(nombre):
+        with open('Usuarios/usuarios.txt') as file:
+            data = json.load(file)
+            for usuario in data['usuarios']:
+                if(usuario['nombre']==nombre):
+                   return usuario['numero']
+    def crearCarpeta(directorio):
+        try:
+            os.mkdir(directorio)
+        except OSError:
+            print("La creación del directorio %s falló" % directorio)
+        else:
+            print("Se ha creado el directorio: %s " % directorio)
+                

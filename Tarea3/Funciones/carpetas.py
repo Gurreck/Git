@@ -1,19 +1,9 @@
 import os
 import sys
 import shutil
+import Funciones.login as log
 class carpeta:
-    def crearCapeta():
-        directorio = 'repositorio'
-        print("creado")
-        try:
-            print("Se creo el repositorio")
-            os.mkdir(directorio)
-            print("Se creo el repositorio")
-        except OSError:
-            print("La creación del directorio %s falló" % directorio)
-        else:
-            print("Se ha creado el directorio: %s " % directorio)
-
+    
     def crearCapetaUsuario(nombre):
         directorio = 'repositorio/'+nombre
         directorio_permanente = directorio+"/permanente"
@@ -27,12 +17,20 @@ class carpeta:
             print("La creación del directorio %s falló" % directorio)
         else:
             print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
-        
-    def commit(nombre):
+    def crearCarpeta(self,directorio):
+        try:
+            os.mkdir(directorio)
+        except OSError:
+            print("La creación del directorio %s falló" % directorio)
+        else:
+            print("Se ha creado el directorio: %s " % directorio)
+    def commit(self,nombre):
         print("entro")
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
         print(directorio_temporal)
-        directorio_permanente = 'repositorio/'+nombre+'/permanente'
+        
+        directorio_permanente = 'repositorio/'+nombre+'/permanente/commit'+str(log.login.verificaNumeroCommit(nombre))
+        self.crearCarpeta(directorio_permanente)
         print(directorio_permanente)
         contenidos=os.listdir(directorio_temporal)
         for elemento in contenidos:
