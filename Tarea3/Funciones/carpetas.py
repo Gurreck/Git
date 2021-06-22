@@ -26,7 +26,7 @@ class carpeta:
         except OSError:
             print("La creación del directorio %s falló" % directorio)
         else:
-            print("Se ha creado el directorio: %s " % directorio+" y sus carptas hijas")
+            print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
         
     def commit(nombre):
         print("entro")

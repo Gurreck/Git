@@ -1,6 +1,7 @@
 import json
 import sys
-
+import Funciones.Mensajes as sms
+from PyQt5 import QtWidgets
 data = {}
 data['usuarios'] = []
 class login:
@@ -18,7 +19,7 @@ class login:
             })
             with open('Usuarios/usuarios.txt', 'w') as outfile:
                 outfile.write(json.dumps(data))
-            print("Usuario registrado")
+            sms.MessageBox(QtWidgets.QWidget).show_message(2)
     def autenficarUsuario(nombre, password):
         with open('Usuarios/usuarios.txt') as file:
             data = json.load(file)
