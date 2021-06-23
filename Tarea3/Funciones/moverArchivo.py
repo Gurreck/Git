@@ -6,7 +6,7 @@ import os
 
 class App(QWidget):
 
-    def getFileName(self, nombre):
+    def getFileName(self, nombre,table):
         file_filter = 'All Files ();;Python Files (.py)'
         response = QFileDialog.getOpenFileName(
             parent=self,
@@ -16,5 +16,5 @@ class App(QWidget):
             initialFilter='All Files ()'
         )
         print(response[0])
-        carpet.carpeta.cargarArchivo(nombre, response[0])
+        carpet.carpeta.cargarArchivo(nombre, response[0],table)
         return response[0]

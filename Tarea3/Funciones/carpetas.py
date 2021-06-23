@@ -1,5 +1,7 @@
 from PyQt5 import QtWidgets, uic,QtGui
 from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem
+import Funciones.Mensajes as sms
+from os import remove
 import os
 import sys
 import shutil
@@ -20,10 +22,30 @@ class carpeta():
         else:
             print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
     
-    def llenarTabla(self,table):
-        data = {'holaaaa'}
-        table.setItem(0,0, QTableWidgetItem("Name"))
-        table.setItem(1,0, QTableWidgetItem("Pipoba88"))
+    def llenarTabla(self,table,nombre):
+        #contenidos=os.listdir(directorio_temporal)
+        directorio_temporal = 'repositorio/'+nombre+'/temporal'
+        contenidos=os.listdir(directorio_temporal)
+        us = 0
+        for elemento in contenidos:
+            table.setItem(us,0, QTableWidgetItem(contenidos[us]))
+            us += 1
+        #table.currentItemChanged.connect(self.seleccionar(table))
+    
+    def eliminarFila(self,table,nombre):
+
+        filaSeleccionada = table.selectedItems()
+        directorio_temporal = 'repositorio/'+nombre+'/temporal'
+        contenidos = os.listdir(directorio_temporal)
+
+        if filaSeleccionada:
+            fila = filaSeleccionada[0].row()
+            print(fila)
+            table.removeRow(fila)
+            remove('repositorio/'+nombre+'/temporal/'+contenidos[fila])
+            table.clearSelection()
+        else:
+            sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Selecciones un archivo a eliminar')
     def crearCarpeta(self,directorio):
         try:
             os.mkdir(directorio)
@@ -50,12 +72,18 @@ class carpeta():
             except:
                 print("Falló")
                 print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
-    def cargarArchivo(nombre, direccion_origen):
+    def cargarArchivo(nombre, direccion_origen,table):
         print("entro")
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
         try:
             shutil.copy(direccion_origen, directorio_temporal)
-            print("Correcto")
+            contenidos = os.listdir(directorio_temporal)
+            table.clearContents()
+            us = 0
+            for elemento in contenidos:
+               table.setItem(us,0, QTableWidgetItem(contenidos[us]))
+               us += 1
+               print("Correcto")
         except:
             print("Falló")
             print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
