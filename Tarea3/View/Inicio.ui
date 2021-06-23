@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1003</width>
-    <height>733</height>
+    <width>999</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -364,6 +364,26 @@ font-weight: bold;</string>
        <string>Opciones</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_atrasOpcionesAdmin">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>590</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atrás</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_userCreaRepo">
      <widget class="QLabel" name="label_8">
@@ -425,6 +445,26 @@ font-weight: bold;</string>
        <string>Administrar Repositorio Usuario</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_atrasOpcionesUser">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>590</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atrás</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_carpetas">
      <widget class="QLabel" name="label_9">
@@ -446,7 +486,7 @@ font-weight: bold;</string>
        <string>Carpetas</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_btnAdministrarCarpeta">
+     <widget class="QPushButton" name="btn_AdministrarCarpeta">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -464,6 +504,170 @@ font-weight: bold;</string>
       </property>
       <property name="text">
        <string>Administrar Carpeta</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>150</y>
+        <width>471</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tbCarpetas">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>471</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>5</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>450</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <stylestrategy>PreferDefault</stylestrategy>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignJustify|AlignVCenter</set>
+        </property>
+        <property name="background">
+         <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_atrasCarpetas">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>620</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atrás</string>
       </property>
      </widget>
     </widget>
@@ -491,7 +695,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>610</y>
+        <y>580</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -511,7 +715,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>530</y>
+        <y>510</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -531,7 +735,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>530</y>
+        <y>510</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -551,7 +755,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>610</y>
+        <y>580</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -571,7 +775,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>100</y>
+        <y>80</y>
         <width>471</width>
         <height>341</height>
        </rect>
@@ -715,7 +919,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>470</y>
+        <y>450</y>
         <width>211</width>
         <height>28</height>
        </rect>
@@ -735,7 +939,7 @@ font-weight: bold;</string>
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>470</y>
+        <y>450</y>
         <width>211</width>
         <height>28</height>
        </rect>
@@ -749,6 +953,26 @@ font-weight: bold;</string>
       </property>
       <property name="text">
        <string>Eliminar Archivo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_atrasAdminCarp">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>640</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atrás</string>
       </property>
      </widget>
     </widget>
@@ -829,12 +1053,12 @@ font-weight: bold;</string>
        <string>Usuario:</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="check_crear">
+     <widget class="QCheckBox" name="check_lectura">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>380</y>
-        <width>81</width>
+        <x>440</x>
+        <y>390</y>
+        <width>91</width>
         <height>21</height>
        </rect>
       </property>
@@ -845,15 +1069,15 @@ font-size: 20px;
 font-weight: bold;</string>
       </property>
       <property name="text">
-       <string>Crear</string>
+       <string>Lectura</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="check_modificar">
+     <widget class="QCheckBox" name="check_escritura">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>380</y>
-        <width>121</width>
+        <x>570</x>
+        <y>390</y>
+        <width>101</width>
         <height>21</height>
        </rect>
       </property>
@@ -864,26 +1088,7 @@ font-size: 20px;
 font-weight: bold;</string>
       </property>
       <property name="text">
-       <string>Modificar</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="check_eliminar">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>380</y>
-        <width>121</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font-family: ebrima;
-color:rgb(255, 255, 255);
-font-size: 20px;
-font-weight: bold;</string>
-      </property>
-      <property name="text">
-       <string>Eliminar</string>
+       <string>Escritura</string>
       </property>
      </widget>
     </widget>
@@ -894,7 +1099,7 @@ font-weight: bold;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1003</width>
+     <width>999</width>
      <height>26</height>
     </rect>
    </property>

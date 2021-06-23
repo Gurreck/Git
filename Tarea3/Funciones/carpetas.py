@@ -57,7 +57,7 @@ class carpeta():
         print("entro")
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
         print(directorio_temporal)
-        
+        log.login.actualizarNumeroCommit(nombre)
         directorio_permanente = 'repositorio/'+nombre+'/permanente/commit'+str(log.login.verificaNumeroCommit(nombre))
         self.crearCarpeta(self,directorio_permanente)
         print(directorio_permanente)

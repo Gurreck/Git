@@ -55,6 +55,14 @@ win.btn_atrasRegistro.clicked.connect(lambda: win.stackedWidget.setCurrentWidget
 win.btn_registrarse.clicked.connect(lambda: usuarios.login.registrarUsuario(win.text_usuarioRegistro.text(),win.text_passwordRegistro.text()))
 win.btn_iniciarSesion.clicked.connect(lambda: autenficarUsuario(win.text_usuario.text(),win.text_password.text()))
 
+#Botones de atras ventanas
+win.btn_atrasOpcionesAdmin.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_inicio))
+win.btn_atrasOpcionesUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_inicio))
+win.btn_atrasCarpetas.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_userCreaRepo))
+win.btn_atrasCarpetas.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_userCreaRepo))
+win.btn_atrasAdminCarp.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_carpetas))
+
+
 win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta(win).crearCapeta())
 win.btn_crearRepoUser.clicked.connect(lambda:carpeta.crearCapetaUsuario(carpeta,win.text_usuario.text()))
 win.btn_crearRepoUser.clicked.connect(lambda:usuarios.login.actualizarUsuarios(win.text_usuario.text()))
@@ -64,9 +72,10 @@ win.btn_crearRepoUser.clicked.connect(lambda: win.btn_administrarRepositorioUser
 
 win.btn_eliminarArchivo.clicked.connect(lambda:carpeta.eliminarFila(carpeta,win.tbContenido,win.text_usuario.text()))
 
+win.btn_administrarRepositorioUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_carpetas))
 
-win.btn_administrarRepositorioUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
-win.btn_administrarRepositorioUser.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text()))
+win.btn_AdministrarCarpeta.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
+win.btn_AdministrarCarpeta.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text()))
 
 
 win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,win.text_usuario.text()))
