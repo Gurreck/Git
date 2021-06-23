@@ -1,8 +1,10 @@
+from PyQt5 import QtWidgets, uic,QtGui
+from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem
 import os
 import sys
 import shutil
 import Funciones.login as log
-class carpeta:
+class carpeta():
     
     def crearCapetaUsuario(self,nombre):
         directorio = 'repositorio/'+nombre
@@ -17,6 +19,11 @@ class carpeta:
             print("La creación del directorio %s falló" % directorio)
         else:
             print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
+    
+    def llenarTabla(self,table):
+        data = {'holaaaa'}
+        table.setItem(0,0, QTableWidgetItem("Name"))
+        table.setItem(1,0, QTableWidgetItem("Pipoba88"))
     def crearCarpeta(self,directorio):
         try:
             os.mkdir(directorio)

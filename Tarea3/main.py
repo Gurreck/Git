@@ -36,11 +36,13 @@ win.btn_atrasRegistro.clicked.connect(lambda: win.stackedWidget.setCurrentWidget
 win.btn_registrarse.clicked.connect(lambda: usuarios.login.registrarUsuario(win.text_usuarioRegistro.text(),win.text_passwordRegistro.text()))
 win.btn_iniciarSesion.clicked.connect(lambda: autenficarUsuario(win.text_usuario.text(),win.text_password.text()))
 
-win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta.crearCapeta())
+win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta(win).crearCapeta())
 win.btn_crearRepoUser.clicked.connect(lambda:carpeta.crearCapetaUsuario(carpeta,win.text_usuario.text()))
 
 win.btn_administrarCarpetasUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
-win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,win.text_usuario.text()))
+win.btn_administrarCarpetasUser.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido))
+
+win.btn_commit.clicked.connect(lambda:carpeta(win).commit(carpeta,win.text_usuario.text()))
 win.btn_update.clicked.connect(lambda: archivo.App(win).getFileName(win.text_usuario.text()))
 win.show() 
 

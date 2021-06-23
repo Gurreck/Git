@@ -451,8 +451,8 @@ font-weight: bold;</string>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>150</y>
+        <x>290</x>
+        <y>0</y>
         <width>471</width>
         <height>41</height>
        </rect>
@@ -470,8 +470,8 @@ font-weight: bold;</string>
      <widget class="QPushButton" name="btn_asignarPermisos">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>480</y>
+        <x>430</x>
+        <y>590</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -490,8 +490,8 @@ font-weight: bold;</string>
      <widget class="QPushButton" name="btn_commit">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>280</y>
+        <x>430</x>
+        <y>440</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -510,8 +510,8 @@ font-weight: bold;</string>
      <widget class="QPushButton" name="btn_update">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>340</y>
+        <x>430</x>
+        <y>490</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -530,8 +530,8 @@ font-weight: bold;</string>
      <widget class="QPushButton" name="btn_recuperarArchivos">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>410</y>
+        <x>430</x>
+        <y>540</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -546,6 +546,150 @@ font-weight: bold;</string>
       <property name="text">
        <string>Recuperar archivos</string>
       </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>50</y>
+        <width>471</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tbContenido">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>471</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>5</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>450</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <stylestrategy>PreferDefault</stylestrategy>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignJustify|AlignVCenter</set>
+        </property>
+        <property name="background">
+         <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </property>
+       </column>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="page_recuperacionArchivos">
@@ -691,14 +835,12 @@ font-weight: bold;</string>
      <x>0</x>
      <y>0</y>
      <width>1003</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="img.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
