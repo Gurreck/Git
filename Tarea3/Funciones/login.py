@@ -18,7 +18,8 @@ class login:
             data['usuarios'].append({
                 'nombre' : nombre,
                 'password': password,
-                'numero': 1
+                'numero': 1,
+                'creado': 'No'
             })
             with open('Usuarios/usuarios.txt') as file:
                 info = json.load(file)
@@ -41,6 +42,15 @@ class login:
                     break
                 else:
                     print("No autenticado")
+    def actualizarUsuarios(nombre):
+        with open('Usuarios/usuarios.txt') as file:
+            data = json.load(file)
+            for usuario in data['usuarios']:
+                if(usuario['nombre']==nombre and usuario['creado']=='No'):
+                    usuario['creado']= 'Si'
+                    with open('Usuarios/usuarios.txt', 'w') as outfile:          
+                        outfile.write(json.dumps(data))
+                    break
     def verificaNumeroCommit(nombre):
         with open('Usuarios/usuarios.txt') as file:
             data = json.load(file)

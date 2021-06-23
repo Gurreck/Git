@@ -1,1 +1,1 @@
-{"usuarios": [{"nombre": "una", "password": "123"}, {"nombre": "Piponcio", "password": "una123"}, {"nombre": "admin", "password": "UNA"}, {"nombre": "eldanix", "password": "123"}, {"nombre": "adrixd", "password": "123"}, {"nombre": "pipo", "password": "123"}, {"nombre": "Elperro", "password": "123"}, {"nombre": "willy", "password": "123", "numero": 1}]}
+{"usuarios": [{"nombre": "tupapi", "password": "123", "numero": 1, "creado": "Si"}, {"nombre": "lindo", "password": "123", "numero": 1, "creado": "No"}, {"nombre": "pipo", "password": "123", "numero": 1, "creado": "Si"}]}

@@ -12,12 +12,27 @@ app = QtWidgets.QApplication([])
 win = uic.loadUi("View/Inicio.ui")
 usuarios.login.leerUsuarios()
 banderaAutenticado = False
+def verificarCreacionRepositorio(nombre):
+    bandera = False
+    with open('Usuarios/usuarios.txt') as file:
+        data = json.load(file)
+        for usuario in data['usuarios']:
+            if(usuario['nombre']==nombre and usuario['creado'] == 'Si'):
+                bandera = True
+        if(bandera==True):
+            global win
+            if(nombre == 'admin'):
+                win.btn_crearRepoPrincipal.hide()
+            else:
+                win.btn_crearRepoUser.hide()
+    
 def autenficarUsuario(nombre, password):
     with open('Usuarios/usuarios.txt') as file:
         data = json.load(file)
         for usuario in data['usuarios']:
             if(usuario['nombre']==nombre and usuario['password']==password):
                 global win
+                verificarCreacionRepositorio(nombre)
                 if(nombre == 'admin'):
                     win.stackedWidget.setCurrentWidget(win.page_adminCreaRepo)
                 else:
@@ -28,8 +43,7 @@ def autenficarUsuario(nombre, password):
                 break
         if(banderaAutenticado == False):
             sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Usuario o contraseña incorrectos')
-    
-    
+
 win.btn_registrar.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_registro))
 win.btn_registrar.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_registro))
 win.btn_atrasRegistro.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_inicio))
@@ -38,12 +52,14 @@ win.btn_iniciarSesion.clicked.connect(lambda: autenficarUsuario(win.text_usuario
 
 win.btn_crearRepoPrincipal.clicked.connect(lambda:carpeta(win).crearCapeta())
 win.btn_crearRepoUser.clicked.connect(lambda:carpeta.crearCapetaUsuario(carpeta,win.text_usuario.text()))
+win.btn_crearRepoUser.clicked.connect(lambda:usuarios.login.actualizarUsuarios(win.text_usuario.text()))
+win.btn_crearRepoUser.clicked.connect(lambda: win.btn_crearRepoUser.hide())
 
-win.btn_administrarCarpetasUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
-win.btn_administrarCarpetasUser.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido))
+win.btn_administrarRepositorioUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
+win.btn_administrarRepositorioUser.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido))
 
-win.btn_commit.clicked.connect(lambda:carpeta(win).commit(carpeta,win.text_usuario.text()))
-win.btn_update.clicked.connect(lambda: archivo.App(win).getFileName(win.text_usuario.text()))
+win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,win.text_usuario.text()))
+win.btn_agregarArchivo.clicked.connect(lambda: archivo.App(win).getFileName(win.text_usuario.text()))
 win.show() 
 
 sys.exit(app.exec())
