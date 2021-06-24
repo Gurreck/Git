@@ -996,6 +996,415 @@ font-weight: bold;</string>
        <string>Recuperación de archivos</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>471</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tbCommit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>471</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>5</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>450</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <stylestrategy>PreferDefault</stylestrategy>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignJustify|AlignVCenter</set>
+        </property>
+        <property name="background">
+         <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_ingresarCommit">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>510</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Ingresar a commit</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_atrasCommit">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>590</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atras</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_recuperarArchivo">
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>70</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 38px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Recuperación de archivos</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>140</y>
+        <width>471</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tbArchivosCommit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>471</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>5</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>450</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <stylestrategy>PreferDefault</stylestrategy>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignJustify|AlignVCenter</set>
+        </property>
+        <property name="background">
+         <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_atrasArchivo">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>590</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atras</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_recuperarArchivo">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>520</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Recuperar Archivo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_recuperarCommit">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>520</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Recuperar Commit</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_asignarPermisosUser">
      <widget class="QLabel" name="label_11">

@@ -16,6 +16,9 @@ usuarios.login.leerUsuarios()
 
 banderaAutenticado = False
 def verificarCreacionRepositorio(nombre):
+    global win
+    win.btn_administrarRepositorioUser.show()
+    win.btn_crearRepoUser.show()
     bandera = False
     with open('Usuarios/usuarios.txt') as file:
         data = json.load(file)
@@ -23,8 +26,6 @@ def verificarCreacionRepositorio(nombre):
             if(usuario['nombre']==nombre and usuario['creado'] == 'Si'):
                 bandera = True
         if(bandera==True):
-            global win
-            
             if(nombre == 'admin'):
                 win.btn_crearRepoPrincipal.hide()
             else:
@@ -89,9 +90,25 @@ win.btn_AdministrarCarpeta.clicked.connect(lambda: win.stackedWidget.setCurrentW
 win.btn_AdministrarCarpeta.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text(),win.tbCarpetas))
 
 
-win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,win.text_usuario.text()))
+win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,carp.carpSelect))
 win.btn_agregarArchivo.clicked.connect(lambda: archivo.App(win).getFileName(carp.carpSelect,win.tbContenido))
+#Recuperacion
+win.btn_recuperarArchivos.clicked.connect(lambda:win.stackedWidget.setCurrentWidget(win.page_recuperacionArchivos))
+win.btn_recuperarArchivos.clicked.connect(lambda: carpeta.llenarTablaRecuperacion(carpeta,win.tbCommit,carp.carpSelect))
 
+
+#Ventana de recuperacion de commits
+win.btn_ingresarCommit.clicked.connect(lambda:win.stackedWidget.setCurrentWidget(win.page_recuperarArchivo))
+win.btn_recuperarCommit.clicked.connect(lambda:carpeta.updateCommit(carpeta))
+win.btn_recuperarCommit.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text(),win.tbCarpetas))
+win.btn_atrasCommit.clicked.connect(lambda:win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
+
+win.btn_recuperarArchivo.clicked.connect(lambda:carpeta.updateArchivo(carpeta,win.tbArchivosCommit))
+win.btn_recuperarArchivo.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text(),win.tbCarpetas))
+#Ventana de recuperacion de archivos
+win.btn_atrasArchivo.clicked.connect(lambda:win.stackedWidget.setCurrentWidget(win.page_recuperacionArchivos))
+
+win.btn_ingresarCommit.clicked.connect(lambda: carpeta.llenarTablaCarpCommit(carpeta,win.tbArchivosCommit,carp.carpSelect,win.tbCommit))
 #PERMISOS
 
 win.check_lectura.toggled.connect(lambda: validarPermisos())

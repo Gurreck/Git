@@ -8,7 +8,7 @@ import shutil
 import Funciones.login as log
 
 carpSelect = ''
-
+commitSelect = ''
 class carpeta():
 
     
@@ -34,6 +34,16 @@ class carpeta():
           for elemento in contenidos:
               table.setItem(us,0, QTableWidgetItem(contenidos[us]))
               us += 1
+              
+    def llenarTablaRecuperacion(self,table,nombre):
+        table.clearContents()
+        print(nombre)
+        directorio = 'repositorio/'+ nombre+'/permanente'
+        contenidos=os.listdir(directorio)
+        us = 0
+        for elemento in contenidos:
+            table.setItem(us,0, QTableWidgetItem(contenidos[us]))
+            us += 1
 
     def llenarTabla(self,table,nombre,tCarpetas):
         table.clearContents()
@@ -56,7 +66,48 @@ class carpeta():
             table.setItem(us,0, QTableWidgetItem(contenidos[us]))
             us += 1
         #table.currentItemChanged.connect(self.seleccionar(table))
-    
+
+    def llenarTablaCarpCommit(self,table,nombre,tCarpetas):
+        table.clearContents()
+        #contenidos=os.listdir(directorio_temporal)
+        filaSeleccionada = tCarpetas.selectedItems()
+        fila = filaSeleccionada[0].row()
+        directorio = 'repositorio/'+nombre+'/permanente'
+        contenidosC=os.listdir(directorio) 
+        global carpSelect
+        global commitSelect
+        commitSelect = contenidosC[fila]
+
+        print(commitSelect)
+        directorio_commit = 'repositorio/'+carpSelect+'/permanente/'+commitSelect
+        contenidos=os.listdir(directorio_commit)
+        us = 0
+        for elemento in contenidos:
+            table.setItem(us,0, QTableWidgetItem(contenidos[us]))
+            us += 1
+        #table.currentItemChanged.connect(self.seleccionar(table))
+    def updateArchivo(self,table):   
+        global carpSelect 
+        global commitSelect   
+        filaSeleccionada = table.selectedItems()
+        directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
+        directorio_permanente = 'repositorio/'+carpSelect+'/permanente/'+commitSelect
+        print(directorio_temporal)
+        print(directorio_permanente)
+        contenidos = os.listdir(directorio_permanente)
+        try:
+            fila = filaSeleccionada[0].row()
+            elemento = contenidos[fila]
+            print(elemento)
+            directorio_permanente_or = 'repositorio/'+carpSelect+'/permanente/'+commitSelect+'/'+elemento
+            print(directorio_permanente_or)
+            src = os.path.join(directorio_permanente, elemento) # origen
+            dst = os.path.join(directorio_temporal, elemento) # destino
+            shutil.copy(src, dst)
+            print("Correcto")
+        except:
+            print("Falló")
+            print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
     def eliminarFila(self,table,carpetas):   
         global carpSelect    
         filaSeleccionada = table.selectedItems()
@@ -92,6 +143,33 @@ class carpeta():
                 print(f"Copiando {elemento} --> {directorio_permanente} ... ", end="")
                 src = os.path.join(directorio_temporal, elemento) # origen
                 dst = os.path.join(directorio_permanente, elemento) # destino
+                shutil.copy(src, dst)
+                print("Correcto")
+            except:
+                print("Falló")
+                print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
+    def eliminarArchivos(self):   
+        global carpSelect
+        global commitSelect
+        directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
+        contenidos = os.listdir(directorio_temporal)
+        for elemento in contenidos:
+            try:
+                remove('repositorio/'+carpSelect+'/temporal/'+elemento)
+            except:
+                print("Falló recuperacion")
+    def updateCommit(self):
+        global carpSelect
+        global commitSelect
+        directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
+        directorio_permanente = 'repositorio/'+carpSelect+'/permanente/'+commitSelect
+        contenidos=os.listdir(directorio_permanente)
+        self.eliminarArchivos(carpeta)
+        for elemento in contenidos:
+            try:
+                print(f"Copiando {elemento} --> {directorio_temporal} ... ", end="")
+                src = os.path.join(directorio_permanente, elemento) # origen
+                dst = os.path.join(directorio_temporal, elemento) # destino
                 shutil.copy(src, dst)
                 print("Correcto")
             except:
