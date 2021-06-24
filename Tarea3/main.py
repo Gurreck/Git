@@ -111,6 +111,9 @@ win.btn_eliminarArchivo.clicked.connect(lambda:carpeta.eliminarFila(carpeta,win.
 win.btn_administrarRepositorioUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_carpetas))
 win.btn_administrarRepositorioUser.clicked.connect(lambda: carpeta.llenarTablaCarpetas(carpeta,win.tbCarpetas,win.text_usuario.text()))
 
+win.btn_administrarRepositorioPrincipal.clicked.connect(lambda: carpeta.llenarTablaCarpetas(carpeta,win.tbCarpetas,win.text_usuario.text()))
+
+
 win.btn_AdministrarCarpeta.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
 win.btn_AdministrarCarpeta.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text(),win.tbCarpetas))
 win.btn_AdministrarCarpeta.clicked.connect(lambda: validarTipoPermisos())###Aqui ocupo el medoitooooooooooooo
@@ -141,6 +144,7 @@ win.check_escritura.toggled.connect(lambda: validarPermisos())
 win.btn_asignarPermisos.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_asignarPermisosUser))
 win.btn_atrasPermisos.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
 win.btn_crearPermiso.clicked.connect(lambda:permiso.registrarPermiso(carp.carpSelect, win.text_usuarioPermiso.text(),tipoPermiso))
+win.btn_update.clicked.connect(lambda:carpeta.update(carpeta,win.tbContenido))
 
 win.show() 
 

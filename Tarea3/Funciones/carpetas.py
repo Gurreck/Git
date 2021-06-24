@@ -29,7 +29,10 @@ class carpeta():
     
     def llenarTablaCarpetas(self,table,nombre):
           table.clearContents()
-          contenidos = permiso.verificarPermisosUsuario(nombre) 
+          if nombre == 'admin':
+              contenidos = os.listdir('repositorio')
+          else: 
+              contenidos = permiso.verificarPermisosUsuario(nombre) 
           us = 0
           for elemento in contenidos:
               table.setItem(us,0, QTableWidgetItem(contenidos[us]))
@@ -46,12 +49,16 @@ class carpeta():
             us += 1
 
     def llenarTabla(self,table,nombre,tCarpetas):
+
         table.clearContents()
         #contenidos=os.listdir(directorio_temporal)
         filaSeleccionada = tCarpetas.selectedItems()
         fila = filaSeleccionada[0].row()
-        directorio = 'repositorio'
-        contenidosC= permiso.verificarPermisosUsuario(nombre) 
+        if nombre != 'admin':
+           contenidosC= permiso.verificarPermisosUsuario(nombre)
+        else:
+           directorio = 'repositorio'
+           contenidosC=os.listdir(directorio)
 
         usuario = contenidosC[fila]
 
@@ -108,6 +115,37 @@ class carpeta():
         except:
             print("Falló")
             print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
+
+    def update(self,table):
+        self.eliminarArchivos(carpeta)
+        table.clearContents()
+        global carpSelect
+        global commitSelect
+        updateUltimo = log.login.verificaNumeroCommit(carpSelect)
+        directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
+        directorio_permanente = 'repositorio/'+carpSelect+'/permanente/'+'commit'+str(updateUltimo)
+        contenidos=os.listdir(directorio_permanente)
+        self.eliminarArchivos(carpeta)
+        for elemento in contenidos:
+            try:
+                print(f"Copiando {elemento} --> {directorio_temporal} ... ", end="")
+                src = os.path.join(directorio_permanente, elemento) # origen
+                dst = os.path.join(directorio_temporal, elemento) # destino
+                shutil.copy(src, dst)
+                print("Correcto")
+            except:
+                print("Falló")
+                print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
+
+        nuevos = os.listdir(directorio_temporal)
+        us = 0
+        for elemento in nuevos:
+            table.setItem(us,0, QTableWidgetItem(nuevos[us]))
+            us += 1
+        
+        
+        
+
     def eliminarFila(self,table,carpetas):   
         global carpSelect    
         filaSeleccionada = table.selectedItems()
