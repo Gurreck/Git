@@ -75,10 +75,8 @@ class permiso:
             data = json.load(file)
             formaPermiso=''
             for permiso in data['permisos']:
-                print(permiso)
                 if(permiso['nombreInvitado']==nombreInvitado and permiso['nombreDueno']==nombreDueno and permiso['permiso']=='lectura'):
                     formaPermiso='lectura'
-                    print('tiene que entrar')
                     return formaPermiso+''
                 if(permiso['nombreInvitado']==nombreInvitado and permiso['nombreDueno']==nombreDueno and permiso['permiso']=='escritura'):
                     formaPermiso = 'escritura'

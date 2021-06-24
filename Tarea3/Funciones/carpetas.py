@@ -40,7 +40,6 @@ class carpeta():
               
     def llenarTablaRecuperacion(self,table,nombre):
         table.clearContents()
-        print(nombre)
         directorio = 'repositorio/'+ nombre+'/permanente'
         contenidos=os.listdir(directorio)
         us = 0
@@ -99,8 +98,6 @@ class carpeta():
         filaSeleccionada = table.selectedItems()
         directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
         directorio_permanente = 'repositorio/'+carpSelect+'/permanente/'+commitSelect
-        print(directorio_temporal)
-        print(directorio_permanente)
         contenidos = os.listdir(directorio_permanente)
         try:
             fila = filaSeleccionada[0].row()
@@ -165,13 +162,10 @@ class carpeta():
         else:
             print("Se ha creado el directorio: %s " % directorio)
     def commit(self,nombre):
-        print("entro")
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
-        print(directorio_temporal)
         log.login.actualizarNumeroCommit(nombre)
         directorio_permanente = 'repositorio/'+nombre+'/permanente/commit'+str(log.login.verificaNumeroCommit(nombre))
         self.crearCarpeta(self,directorio_permanente)
-        print(directorio_permanente)
         contenidos=os.listdir(directorio_temporal)
         for elemento in contenidos:
             try:
@@ -211,9 +205,9 @@ class carpeta():
                 print("Falló")
                 print("Error, no se pudo copiar el archivo. Verifique los permisos de escritura")
     def cargarArchivo(nombre, direccion_origen,table):
-        print("entro")
+        
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
-        print('Nombre: '+nombre)
+       
         try:
             shutil.copy(direccion_origen, directorio_temporal)
             contenidos = os.listdir(directorio_temporal)
