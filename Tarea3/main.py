@@ -111,6 +111,7 @@ win.btn_eliminarArchivo.clicked.connect(lambda:carpeta.eliminarFila(carpeta,win.
 win.btn_administrarRepositorioUser.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_carpetas))
 win.btn_administrarRepositorioUser.clicked.connect(lambda: carpeta.llenarTablaCarpetas(carpeta,win.tbCarpetas,win.text_usuario.text()))
 
+win.btn_administrarRepositorioPrincipal.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_carpetas))
 win.btn_administrarRepositorioPrincipal.clicked.connect(lambda: carpeta.llenarTablaCarpetas(carpeta,win.tbCarpetas,win.text_usuario.text()))
 
 
