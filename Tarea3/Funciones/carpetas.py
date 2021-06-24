@@ -17,7 +17,7 @@ class carpeta():
         directorio = 'repositorio/'+nombre
         directorio_permanente = directorio+"/permanente"
         directorio_temporal = directorio+"/temporal"
-        print("crenado")
+        print("creado")
         try:
             os.mkdir(directorio)
             os.mkdir(directorio_permanente)
@@ -143,9 +143,6 @@ class carpeta():
             table.setItem(us,0, QTableWidgetItem(nuevos[us]))
             us += 1
         
-        
-        
-
     def eliminarFila(self,table,carpetas):   
         global carpSelect    
         filaSeleccionada = table.selectedItems()

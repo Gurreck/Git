@@ -1,1 +1,1 @@
-{"permisos": [{"nombreDueno": "pipo", "nombreInvitado": "er", "permiso": "lectura"}, {"nombreDueno": "teban", "nombreInvitado": "daniel", "permiso": "lectura"}, {"nombreDueno": "pipo", "nombreInvitado": "adrian", "permiso": "escritura"}, {"nombreDueno": "pipo", "nombreInvitado": "teban", "permiso": "lectura"}]}
+{"permisos": [{"nombreDueno": "adrian", "nombreInvitado": "daniel", "permiso": "lectura"}, {"nombreDueno": "adrian", "nombreInvitado": "reyner", "permiso": "escritura"}, {"nombreDueno": "daniel", "nombreInvitado": "esteban", "permiso": "escritura"}]}

@@ -7,10 +7,6 @@ data = {}
 data['permisos'] = []
 formaPermiso = ''
 class permiso:
-    # def leerPermisos():
-    #     with open('Usuarios/usuarios.txt') as file:
-    #        global data
-    #        data = json.load(file)
     def leerPermisos():
         with open('Usuarios/permisos.txt') as file:
            global data
@@ -75,7 +71,6 @@ class permiso:
         return perm
     def verificarTipoPermiso(nombreInvitado, nombreDueno):
         global data
-        print('Entra a validar')
         with open('Usuarios/permisos.txt') as file:
             data = json.load(file)
             formaPermiso=''

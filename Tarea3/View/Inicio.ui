@@ -62,8 +62,8 @@ font-weight: bold;</string>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>160</y>
+        <x>360</x>
+        <y>150</y>
         <width>431</width>
         <height>41</height>
        </rect>
@@ -75,7 +75,7 @@ font-size: 38px;
 font-weight: bold;</string>
       </property>
       <property name="text">
-       <string>Bienvenido a Git Papus</string>
+       <string>Bienvenido a Git</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -1549,7 +1549,7 @@ font-weight: bold;</string>
      <x>0</x>
      <y>0</y>
      <width>1003</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

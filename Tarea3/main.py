@@ -70,7 +70,7 @@ def validarTipoPermisos():
     
     print('El permiso es'+str(perm.permiso.verificarTipoPermiso(win.text_usuario.text(),carp.carpSelect)))
     if( perm.permiso.verificarTipoPermiso(win.text_usuario.text(),carp.carpSelect) =='lectura'):
-        print('no entrooo ay ay ay')
+        
         win.btn_agregarArchivo.hide()
         win.btn_eliminarArchivo.hide()
         win.btn_commit.hide()
