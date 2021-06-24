@@ -4,32 +4,67 @@ import Funciones.Mensajes as sms
 from PyQt5 import QtWidgets
 import os
 data = {}
-data['usuarios'] = []
-class login:
-    def leerUsuarios():
-        with open('Usuarios/usuarios.txt') as file:
+data['permisos'] = []
+class permiso:
+    # def leerPermisos():
+    #     with open('Usuarios/usuarios.txt') as file:
+    #        global data
+    #        data = json.load(file)
+    def leerPermisos():
+        with open('Usuarios/permisos.txt') as file:
            global data
            data = json.load(file)
-
-    def registrarUsuario(nombre, password):
+    def registrarPermiso(nombreDueno, nombreInvitado, permiso):
         bandera = True
-        if nombre and password:
-            global data
-            data['usuarios'].append({
-                'nombre' : nombre,
-                'password': password,
-                'numero': 0,
-                'creado': 'No'
+        banderaUser = False
+        banderaActualizar = False
+        global data
+        if nombreDueno and nombreInvitado and permiso:
+            with open('Usuarios/permisos.txt') as file:
+                data = json.load(file)
+            data['permisos'].append({
+                'nombreDueno' : nombreDueno,
+                'nombreInvitado': nombreInvitado,
+                'permiso': permiso
             })
-            with open('Usuarios/usuarios.txt') as file:
+            with open('Usuarios/permisos.txt') as file:
                 info = json.load(file)
-                for usuario in info['usuarios']:
-                    if(usuario['nombre'] == nombre):
+                for permisoc in info['permisos']:
+                    if(permisoc['nombreDueno'] == nombreDueno and permisoc['nombreInvitado'] == nombreInvitado and permisoc['permiso'] == permiso):
                         bandera = False
+                        break
+                    if(permisoc['nombreDueno'] == nombreDueno and permisoc['nombreInvitado'] == nombreInvitado):
+                        
+                        permisoc['permiso'] = permiso
+                        with open('Usuarios/permisos.txt', 'w') as outfile1: 
+                            outfile1.write(json.dumps(info))
+                        banderaActualizar = True
+                        break
+            with open('Usuarios/usuarios.txt') as file:
+                infou = json.load(file)
+                for usuario in infou['usuarios']:
+                    if(usuario['nombre'] == nombreInvitado):
+                        banderaUser = True
 
-            if bandera == True:   
-                with open('Usuarios/usuarios.txt', 'w') as outfile:          
-                   outfile.write(json.dumps(data))
-                   sms.MessageBox(QtWidgets.QWidget).show_message(2,'Registro','Usuario registrado con exito')
+            if bandera == True: 
+                if banderaActualizar == True:
+                    print("Se actualizo el permiso")
+                else:
+                    with open('Usuarios/permisos.txt', 'w') as outfile:          
+                        outfile.write(json.dumps(data))
+                        sms.MessageBox(QtWidgets.QWidget).show_message(2,'Registro','Permiso guardado con exito')
             else:
-                sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Lo sentimos, ya existe un usuario registrado con ese nombre')
+                if(banderaUser == False):
+                    sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Lo sentimos, el usuario al cual se le asignara el permiso no existe')
+                else:
+                    sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Lo sentimos, ya existe ese permiso')
+
+    def verificarPermisosUsuario(nombre):
+        with open('Usuarios/permisos.txt') as file:
+            data = json.load(file)
+            for permiso in data['permisos']:
+                if(permiso['nombreInvitado']==nombre):
+                    
+                    break
+                else:
+                    print("No autenticado")

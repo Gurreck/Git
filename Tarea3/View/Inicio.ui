@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>999</width>
-    <height>724</height>
+    <width>1003</width>
+    <height>733</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1053,13 +1053,33 @@ font-weight: bold;</string>
        <string>Usuario:</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="check_lectura">
+     <widget class="QPushButton" name="btn_crearPermiso">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>390</y>
-        <width>91</width>
-        <height>21</height>
+        <x>480</x>
+        <y>490</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Crear Permiso</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="check_lectura">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>400</y>
+        <width>141</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1072,13 +1092,13 @@ font-weight: bold;</string>
        <string>Lectura</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="check_escritura">
+     <widget class="QRadioButton" name="check_escritura">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>390</y>
-        <width>101</width>
-        <height>21</height>
+        <x>590</x>
+        <y>400</y>
+        <width>141</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1091,6 +1111,26 @@ font-weight: bold;</string>
        <string>Escritura</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_atrasPermisos">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>550</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 172, 56);
+font-family: ebrima;
+color:rgb(255, 255, 255);
+font-size: 22px;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Atrás</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -1099,8 +1139,8 @@ font-weight: bold;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>999</width>
-     <height>26</height>
+     <width>1003</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
