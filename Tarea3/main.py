@@ -7,13 +7,13 @@ from Funciones.permisos import permiso
 import json
 import Funciones.Mensajes as sms
 import Funciones.carpetas as carp
+import Funciones.permisos as perm
 from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
 import Funciones.moverArchivo as archivo
 app = QtWidgets.QApplication([])
 
 win = uic.loadUi("View/Inicio.ui")
 usuarios.login.leerUsuarios()
-
 banderaAutenticado = False
 def verificarCreacionRepositorio(nombre):
     global win
@@ -60,6 +60,31 @@ def validarPermisos():
     if(win.check_escritura.isChecked()):
         tipoPermiso = 'escritura'
 
+def validarTipoPermisos():
+    win.btn_agregarArchivo.show()
+    win.btn_eliminarArchivo.show()
+    win.btn_commit.show()
+    win.btn_update.show()
+    win.btn_asignarPermisos.show()
+    win.btn_recuperarArchivos.show()
+    
+    print('El permiso es'+str(perm.permiso.verificarTipoPermiso(win.text_usuario.text(),carp.carpSelect)))
+    if( perm.permiso.verificarTipoPermiso(win.text_usuario.text(),carp.carpSelect) =='lectura'):
+        print('no entrooo ay ay ay')
+        win.btn_agregarArchivo.hide()
+        win.btn_eliminarArchivo.hide()
+        win.btn_commit.hide()
+        win.btn_update.hide()
+        win.btn_asignarPermisos.hide()
+        win.btn_recuperarArchivos.hide()
+    elif perm.permiso.verificarTipoPermiso(win.text_usuario.text(),carp.carpSelect)== 'escritura':
+        win.btn_agregarArchivo.show()
+        win.btn_eliminarArchivo.show()
+        win.btn_commit.show()
+        win.btn_update.show()
+        win.btn_recuperarArchivos.show()
+        win.btn_asignarPermisos.hide()
+
 win.btn_registrar.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_registro))
 win.btn_registrar.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_registro))
 win.btn_atrasRegistro.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_inicio))
@@ -88,7 +113,7 @@ win.btn_administrarRepositorioUser.clicked.connect(lambda: carpeta.llenarTablaCa
 
 win.btn_AdministrarCarpeta.clicked.connect(lambda: win.stackedWidget.setCurrentWidget(win.page_administrarCarpetasUser))
 win.btn_AdministrarCarpeta.clicked.connect(lambda: carpeta.llenarTabla(carpeta,win.tbContenido,win.text_usuario.text(),win.tbCarpetas))
-
+win.btn_AdministrarCarpeta.clicked.connect(lambda: validarTipoPermisos())###Aqui ocupo el medoitooooooooooooo
 
 win.btn_commit.clicked.connect(lambda:carpeta.commit(carpeta,carp.carpSelect))
 win.btn_agregarArchivo.clicked.connect(lambda: archivo.App(win).getFileName(carp.carpSelect,win.tbContenido))

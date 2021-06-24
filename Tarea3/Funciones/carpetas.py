@@ -13,8 +13,6 @@ carpSelect = ''
 commitSelect = ''
 class carpeta():
 
-    
-
     def crearCapetaUsuario(self,nombre):
         directorio = 'repositorio/'+nombre
         directorio_permanente = directorio+"/permanente"

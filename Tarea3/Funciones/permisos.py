@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 import os
 data = {}
 data['permisos'] = []
+formaPermiso = ''
 class permiso:
     # def leerPermisos():
     #     with open('Usuarios/usuarios.txt') as file:
@@ -71,6 +72,21 @@ class permiso:
                     if ingresado == False:
                       perm.append(nombre)  
                       ingresado = True  
-
         return perm
+    def verificarTipoPermiso(nombreInvitado, nombreDueno):
+        global data
+        print('Entra a validar')
+        with open('Usuarios/permisos.txt') as file:
+            data = json.load(file)
+            formaPermiso=''
+            for permiso in data['permisos']:
+                print(permiso)
+                if(permiso['nombreInvitado']==nombreInvitado and permiso['nombreDueno']==nombreDueno and permiso['permiso']=='lectura'):
+                    formaPermiso='lectura'
+                    print('tiene que entrar')
+                    return formaPermiso+''
+                if(permiso['nombreInvitado']==nombreInvitado and permiso['nombreDueno']==nombreDueno and permiso['permiso']=='escritura'):
+                    formaPermiso = 'escritura'
+                    return formaPermiso+''
+
         
