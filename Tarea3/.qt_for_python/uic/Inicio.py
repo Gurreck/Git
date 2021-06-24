@@ -164,6 +164,14 @@ class Ui_Git(object):
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
+        self.btn_atrasOpcionesAdmin = QPushButton(self.page_adminCreaRepo)
+        self.btn_atrasOpcionesAdmin.setObjectName(u"btn_atrasOpcionesAdmin")
+        self.btn_atrasOpcionesAdmin.setGeometry(QRect(430, 590, 171, 31))
+        self.btn_atrasOpcionesAdmin.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
         self.stackedWidget.addWidget(self.page_adminCreaRepo)
         self.page_userCreaRepo = QWidget()
         self.page_userCreaRepo.setObjectName(u"page_userCreaRepo")
@@ -182,75 +190,49 @@ class Ui_Git(object):
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_administrarCarpetasUser = QPushButton(self.page_userCreaRepo)
-        self.btn_administrarCarpetasUser.setObjectName(u"btn_administrarCarpetasUser")
-        self.btn_administrarCarpetasUser.setGeometry(QRect(340, 350, 341, 31))
-        self.btn_administrarCarpetasUser.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_administrarRepositorioUser = QPushButton(self.page_userCreaRepo)
+        self.btn_administrarRepositorioUser.setObjectName(u"btn_administrarRepositorioUser")
+        self.btn_administrarRepositorioUser.setGeometry(QRect(340, 350, 341, 31))
+        self.btn_administrarRepositorioUser.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_atrasOpcionesUser = QPushButton(self.page_userCreaRepo)
+        self.btn_atrasOpcionesUser.setObjectName(u"btn_atrasOpcionesUser")
+        self.btn_atrasOpcionesUser.setGeometry(QRect(430, 590, 171, 31))
+        self.btn_atrasOpcionesUser.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
         self.stackedWidget.addWidget(self.page_userCreaRepo)
-        self.page_carpetasUser = QWidget()
-        self.page_carpetasUser.setObjectName(u"page_carpetasUser")
-        self.label_9 = QLabel(self.page_carpetasUser)
+        self.page_carpetas = QWidget()
+        self.page_carpetas.setObjectName(u"page_carpetas")
+        self.label_9 = QLabel(self.page_carpetas)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(440, 60, 171, 41))
         self.label_9.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 38px;\n"
 "font-weight: bold;")
-        self.stackedWidget.addWidget(self.page_carpetasUser)
-        self.page_administrarCarpetasUser = QWidget()
-        self.page_administrarCarpetasUser.setObjectName(u"page_administrarCarpetasUser")
-        self.label_10 = QLabel(self.page_administrarCarpetasUser)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(290, 0, 471, 41))
-        self.label_10.setStyleSheet(u"font-family: ebrima;\n"
-"color:rgb(255, 255, 255);\n"
-"font-size: 38px;\n"
-"font-weight: bold;")
-        self.btn_asignarPermisos = QPushButton(self.page_administrarCarpetasUser)
-        self.btn_asignarPermisos.setObjectName(u"btn_asignarPermisos")
-        self.btn_asignarPermisos.setGeometry(QRect(430, 590, 211, 31))
-        self.btn_asignarPermisos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+        self.btn_AdministrarCarpeta = QPushButton(self.page_carpetas)
+        self.btn_AdministrarCarpeta.setObjectName(u"btn_AdministrarCarpeta")
+        self.btn_AdministrarCarpeta.setGeometry(QRect(400, 550, 241, 31))
+        self.btn_AdministrarCarpeta.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
 "font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 22px;\n"
 "font-weight: bold;")
-        self.btn_commit = QPushButton(self.page_administrarCarpetasUser)
-        self.btn_commit.setObjectName(u"btn_commit")
-        self.btn_commit.setGeometry(QRect(430, 440, 211, 31))
-        self.btn_commit.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
-"font-family: ebrima;\n"
-"color:rgb(255, 255, 255);\n"
-"font-size: 22px;\n"
-"font-weight: bold;")
-        self.btn_update = QPushButton(self.page_administrarCarpetasUser)
-        self.btn_update.setObjectName(u"btn_update")
-        self.btn_update.setGeometry(QRect(430, 490, 211, 31))
-        self.btn_update.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
-"font-family: ebrima;\n"
-"color:rgb(255, 255, 255);\n"
-"font-size: 22px;\n"
-"font-weight: bold;")
-        self.btn_recuperarArchivos = QPushButton(self.page_administrarCarpetasUser)
-        self.btn_recuperarArchivos.setObjectName(u"btn_recuperarArchivos")
-        self.btn_recuperarArchivos.setGeometry(QRect(430, 540, 211, 31))
-        self.btn_recuperarArchivos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
-"font-family: ebrima;\n"
-"color:rgb(255, 255, 255);\n"
-"font-size: 22px;\n"
-"font-weight: bold;")
-        self.frame = QFrame(self.page_administrarCarpetasUser)
-        self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(300, 50, 471, 341))
-        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.tbContenido = QTableWidget(self.frame)
-        if (self.tbContenido.columnCount() < 1):
-            self.tbContenido.setColumnCount(1)
+        self.frame_2 = QFrame(self.page_carpetas)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setGeometry(QRect(280, 150, 471, 341))
+        self.frame_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.tbCarpetas = QTableWidget(self.frame_2)
+        if (self.tbCarpetas.columnCount() < 1):
+            self.tbCarpetas.setColumnCount(1)
         font = QFont()
         font.setPointSize(8)
         font.setStyleStrategy(QFont.PreferDefault)
@@ -258,51 +240,180 @@ class Ui_Git(object):
         __qtablewidgetitem.setTextAlignment(Qt.AlignJustify|Qt.AlignVCenter);
         __qtablewidgetitem.setFont(font);
         __qtablewidgetitem.setBackground(QColor(0, 0, 0));
-        self.tbContenido.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        if (self.tbContenido.rowCount() < 17):
-            self.tbContenido.setRowCount(17)
+        self.tbCarpetas.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        if (self.tbCarpetas.rowCount() < 17):
+            self.tbCarpetas.setRowCount(17)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(0, __qtablewidgetitem1)
+        self.tbCarpetas.setVerticalHeaderItem(0, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(1, __qtablewidgetitem2)
+        self.tbCarpetas.setVerticalHeaderItem(1, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(2, __qtablewidgetitem3)
+        self.tbCarpetas.setVerticalHeaderItem(2, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(3, __qtablewidgetitem4)
+        self.tbCarpetas.setVerticalHeaderItem(3, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(4, __qtablewidgetitem5)
+        self.tbCarpetas.setVerticalHeaderItem(4, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(5, __qtablewidgetitem6)
+        self.tbCarpetas.setVerticalHeaderItem(5, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(6, __qtablewidgetitem7)
+        self.tbCarpetas.setVerticalHeaderItem(6, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(7, __qtablewidgetitem8)
+        self.tbCarpetas.setVerticalHeaderItem(7, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(8, __qtablewidgetitem9)
+        self.tbCarpetas.setVerticalHeaderItem(8, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(9, __qtablewidgetitem10)
+        self.tbCarpetas.setVerticalHeaderItem(9, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(10, __qtablewidgetitem11)
+        self.tbCarpetas.setVerticalHeaderItem(10, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(11, __qtablewidgetitem12)
+        self.tbCarpetas.setVerticalHeaderItem(11, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(12, __qtablewidgetitem13)
+        self.tbCarpetas.setVerticalHeaderItem(12, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(13, __qtablewidgetitem14)
+        self.tbCarpetas.setVerticalHeaderItem(13, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(14, __qtablewidgetitem15)
+        self.tbCarpetas.setVerticalHeaderItem(14, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(15, __qtablewidgetitem16)
+        self.tbCarpetas.setVerticalHeaderItem(15, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tbContenido.setVerticalHeaderItem(16, __qtablewidgetitem17)
-        self.tbContenido.setObjectName(u"tbContenido")
-        self.tbContenido.setGeometry(QRect(0, 0, 471, 341))
+        self.tbCarpetas.setVerticalHeaderItem(16, __qtablewidgetitem17)
+        self.tbCarpetas.setObjectName(u"tbCarpetas")
+        self.tbCarpetas.setGeometry(QRect(0, 0, 471, 341))
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(5)
         sizePolicy.setVerticalStretch(5)
+        sizePolicy.setHeightForWidth(self.tbCarpetas.sizePolicy().hasHeightForWidth())
+        self.tbCarpetas.setSizePolicy(sizePolicy)
+        self.tbCarpetas.horizontalHeader().setDefaultSectionSize(450)
+        self.btn_atrasCarpetas = QPushButton(self.page_carpetas)
+        self.btn_atrasCarpetas.setObjectName(u"btn_atrasCarpetas")
+        self.btn_atrasCarpetas.setGeometry(QRect(430, 620, 171, 31))
+        self.btn_atrasCarpetas.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.stackedWidget.addWidget(self.page_carpetas)
+        self.page_administrarCarpetasUser = QWidget()
+        self.page_administrarCarpetasUser.setObjectName(u"page_administrarCarpetasUser")
+        self.label_10 = QLabel(self.page_administrarCarpetasUser)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(290, 20, 471, 41))
+        self.label_10.setStyleSheet(u"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 38px;\n"
+"font-weight: bold;")
+        self.btn_asignarPermisos = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_asignarPermisos.setObjectName(u"btn_asignarPermisos")
+        self.btn_asignarPermisos.setGeometry(QRect(300, 580, 211, 31))
+        self.btn_asignarPermisos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_commit = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_commit.setObjectName(u"btn_commit")
+        self.btn_commit.setGeometry(QRect(300, 510, 211, 31))
+        self.btn_commit.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_update = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setGeometry(QRect(560, 510, 211, 31))
+        self.btn_update.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_recuperarArchivos = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_recuperarArchivos.setObjectName(u"btn_recuperarArchivos")
+        self.btn_recuperarArchivos.setGeometry(QRect(560, 580, 211, 31))
+        self.btn_recuperarArchivos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.frame = QFrame(self.page_administrarCarpetasUser)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(290, 80, 471, 341))
+        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.tbContenido = QTableWidget(self.frame)
+        if (self.tbContenido.columnCount() < 1):
+            self.tbContenido.setColumnCount(1)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        __qtablewidgetitem18.setTextAlignment(Qt.AlignJustify|Qt.AlignVCenter);
+        __qtablewidgetitem18.setFont(font);
+        __qtablewidgetitem18.setBackground(QColor(0, 0, 0));
+        self.tbContenido.setHorizontalHeaderItem(0, __qtablewidgetitem18)
+        if (self.tbContenido.rowCount() < 17):
+            self.tbContenido.setRowCount(17)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(0, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(1, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(2, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(3, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(4, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(5, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(6, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(7, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(8, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(9, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(10, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(11, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(12, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(13, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(14, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(15, __qtablewidgetitem34)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        self.tbContenido.setVerticalHeaderItem(16, __qtablewidgetitem35)
+        self.tbContenido.setObjectName(u"tbContenido")
+        self.tbContenido.setGeometry(QRect(0, 0, 471, 341))
         sizePolicy.setHeightForWidth(self.tbContenido.sizePolicy().hasHeightForWidth())
         self.tbContenido.setSizePolicy(sizePolicy)
         self.tbContenido.horizontalHeader().setDefaultSectionSize(450)
+        self.btn_agregarArchivo = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_agregarArchivo.setObjectName(u"btn_agregarArchivo")
+        self.btn_agregarArchivo.setGeometry(QRect(300, 450, 211, 28))
+        self.btn_agregarArchivo.setStyleSheet(u"background-color: #ffffff;\n"
+"font-family: ebrima;\n"
+"color:rgb(0,0,0);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_eliminarArchivo = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_eliminarArchivo.setObjectName(u"btn_eliminarArchivo")
+        self.btn_eliminarArchivo.setGeometry(QRect(560, 450, 211, 28))
+        self.btn_eliminarArchivo.setStyleSheet(u"background-color: #ffffff;\n"
+"font-family: ebrima;\n"
+"color:rgb(0,0,0);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.btn_atrasAdminCarp = QPushButton(self.page_administrarCarpetasUser)
+        self.btn_atrasAdminCarp.setObjectName(u"btn_atrasAdminCarp")
+        self.btn_atrasAdminCarp.setGeometry(QRect(450, 640, 171, 31))
+        self.btn_atrasAdminCarp.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
         self.stackedWidget.addWidget(self.page_administrarCarpetasUser)
         self.page_recuperacionArchivos = QWidget()
         self.page_recuperacionArchivos.setObjectName(u"page_recuperacionArchivos")
@@ -338,26 +449,35 @@ class Ui_Git(object):
 "color:rgb(255, 255, 255);\n"
 "font-size: 24px;\n"
 "font-weight: bold;")
-        self.check_crear = QCheckBox(self.page_asignarPermisosUser)
-        self.check_crear.setObjectName(u"check_crear")
-        self.check_crear.setGeometry(QRect(370, 380, 81, 21))
-        self.check_crear.setStyleSheet(u"font-family: ebrima;\n"
+        self.btn_crearPermiso = QPushButton(self.page_asignarPermisosUser)
+        self.btn_crearPermiso.setObjectName(u"btn_crearPermiso")
+        self.btn_crearPermiso.setGeometry(QRect(480, 490, 171, 31))
+        self.btn_crearPermiso.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
+"color:rgb(255, 255, 255);\n"
+"font-size: 22px;\n"
+"font-weight: bold;")
+        self.check_lectura = QRadioButton(self.page_asignarPermisosUser)
+        self.check_lectura.setObjectName(u"check_lectura")
+        self.check_lectura.setGeometry(QRect(420, 400, 141, 20))
+        self.check_lectura.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 20px;\n"
 "font-weight: bold;")
-        self.check_modificar = QCheckBox(self.page_asignarPermisosUser)
-        self.check_modificar.setObjectName(u"check_modificar")
-        self.check_modificar.setGeometry(QRect(510, 380, 121, 21))
-        self.check_modificar.setStyleSheet(u"font-family: ebrima;\n"
+        self.check_escritura = QRadioButton(self.page_asignarPermisosUser)
+        self.check_escritura.setObjectName(u"check_escritura")
+        self.check_escritura.setGeometry(QRect(590, 400, 141, 20))
+        self.check_escritura.setStyleSheet(u"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
 "font-size: 20px;\n"
 "font-weight: bold;")
-        self.check_eliminar = QCheckBox(self.page_asignarPermisosUser)
-        self.check_eliminar.setObjectName(u"check_eliminar")
-        self.check_eliminar.setGeometry(QRect(680, 380, 121, 21))
-        self.check_eliminar.setStyleSheet(u"font-family: ebrima;\n"
+        self.btn_atrasPermisos = QPushButton(self.page_asignarPermisosUser)
+        self.btn_atrasPermisos.setObjectName(u"btn_atrasPermisos")
+        self.btn_atrasPermisos.setGeometry(QRect(480, 550, 171, 31))
+        self.btn_atrasPermisos.setStyleSheet(u"background-color: rgb(255, 172, 56);\n"
+"font-family: ebrima;\n"
 "color:rgb(255, 255, 255);\n"
-"font-size: 20px;\n"
+"font-size: 22px;\n"
 "font-weight: bold;")
         self.stackedWidget.addWidget(self.page_asignarPermisosUser)
         Git.setCentralWidget(self.centralwidget)
@@ -392,22 +512,32 @@ class Ui_Git(object):
         self.btn_crearRepoPrincipal.setText(QCoreApplication.translate("Git", u"Crear Repositorio Principal", None))
         self.btn_administrarRepositorioPrincipal.setText(QCoreApplication.translate("Git", u"Administrar Repositorio", None))
         self.label_7.setText(QCoreApplication.translate("Git", u"Opciones", None))
+        self.btn_atrasOpcionesAdmin.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
         self.label_8.setText(QCoreApplication.translate("Git", u"Opciones", None))
         self.btn_crearRepoUser.setText(QCoreApplication.translate("Git", u"Crear carpeta repositorio", None))
-        self.btn_administrarCarpetasUser.setText(QCoreApplication.translate("Git", u"Administrar carpetas", None))
+        self.btn_administrarRepositorioUser.setText(QCoreApplication.translate("Git", u"Administrar Repositorio Usuario", None))
+        self.btn_atrasOpcionesUser.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
         self.label_9.setText(QCoreApplication.translate("Git", u"Carpetas", None))
+        self.btn_AdministrarCarpeta.setText(QCoreApplication.translate("Git", u"Administrar Carpeta", None))
+        ___qtablewidgetitem = self.tbCarpetas.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Git", u"Nombre", None));
+        self.btn_atrasCarpetas.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
         self.label_10.setText(QCoreApplication.translate("Git", u"Administracion de carpeta", None))
         self.btn_asignarPermisos.setText(QCoreApplication.translate("Git", u"Asignar permisos", None))
         self.btn_commit.setText(QCoreApplication.translate("Git", u"Commit", None))
         self.btn_update.setText(QCoreApplication.translate("Git", u"Update", None))
         self.btn_recuperarArchivos.setText(QCoreApplication.translate("Git", u"Recuperar archivos", None))
-        ___qtablewidgetitem = self.tbContenido.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("Git", u"Nombre", None));
+        ___qtablewidgetitem1 = self.tbContenido.horizontalHeaderItem(0)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("Git", u"Nombre", None));
+        self.btn_agregarArchivo.setText(QCoreApplication.translate("Git", u"Agregar Archivo", None))
+        self.btn_eliminarArchivo.setText(QCoreApplication.translate("Git", u"Eliminar Archivo", None))
+        self.btn_atrasAdminCarp.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
         self.label_13.setText(QCoreApplication.translate("Git", u"Recuperaci\u00f3n de archivos", None))
         self.label_11.setText(QCoreApplication.translate("Git", u"Asignar permisos a usuario", None))
         self.label_12.setText(QCoreApplication.translate("Git", u"Usuario:", None))
-        self.check_crear.setText(QCoreApplication.translate("Git", u"Crear", None))
-        self.check_modificar.setText(QCoreApplication.translate("Git", u"Modificar", None))
-        self.check_eliminar.setText(QCoreApplication.translate("Git", u"Eliminar", None))
+        self.btn_crearPermiso.setText(QCoreApplication.translate("Git", u"Crear Permiso", None))
+        self.check_lectura.setText(QCoreApplication.translate("Git", u"Lectura", None))
+        self.check_escritura.setText(QCoreApplication.translate("Git", u"Escritura", None))
+        self.btn_atrasPermisos.setText(QCoreApplication.translate("Git", u"Atr\u00e1s", None))
     # retranslateUi
 

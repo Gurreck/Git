@@ -6,8 +6,13 @@ import os
 import sys
 import shutil
 import Funciones.login as log
+
+carpSelect = ''
+
 class carpeta():
+
     
+
     def crearCapetaUsuario(self,nombre):
         directorio = 'repositorio/'+nombre
         directorio_permanente = directorio+"/permanente"
@@ -22,9 +27,29 @@ class carpeta():
         else:
             print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
     
-    def llenarTabla(self,table,nombre):
+    def llenarTablaCarpetas(self,table,nombre):
+          directorio = 'repositorio'
+          contenidos=os.listdir(directorio)
+          us = 0
+          for elemento in contenidos:
+              table.setItem(us,0, QTableWidgetItem(contenidos[us]))
+              us += 1
+
+    def llenarTabla(self,table,nombre,tCarpetas):
+        table.clearContents()
         #contenidos=os.listdir(directorio_temporal)
-        directorio_temporal = 'repositorio/'+nombre+'/temporal'
+        filaSeleccionada = tCarpetas.selectedItems()
+        fila = filaSeleccionada[0].row()
+        directorio = 'repositorio'
+        contenidosC=os.listdir(directorio) 
+
+        usuario = contenidosC[fila]
+
+        global carpSelect
+
+        carpSelect = usuario
+        print(carpSelect)
+        directorio_temporal = 'repositorio/'+usuario+'/temporal'
         contenidos=os.listdir(directorio_temporal)
         us = 0
         for elemento in contenidos:
@@ -32,17 +57,17 @@ class carpeta():
             us += 1
         #table.currentItemChanged.connect(self.seleccionar(table))
     
-    def eliminarFila(self,table,nombre):
-
+    def eliminarFila(self,table,carpetas):   
+        global carpSelect    
         filaSeleccionada = table.selectedItems()
-        directorio_temporal = 'repositorio/'+nombre+'/temporal'
+
+        directorio_temporal = 'repositorio/'+carpSelect+'/temporal'
         contenidos = os.listdir(directorio_temporal)
 
         if filaSeleccionada:
             fila = filaSeleccionada[0].row()
-            print(fila)
             table.removeRow(fila)
-            remove('repositorio/'+nombre+'/temporal/'+contenidos[fila])
+            remove('repositorio/'+carpSelect+'/temporal/'+contenidos[fila])
             table.clearSelection()
         else:
             sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Selecciones un archivo a eliminar')
@@ -75,6 +100,7 @@ class carpeta():
     def cargarArchivo(nombre, direccion_origen,table):
         print("entro")
         directorio_temporal = 'repositorio/'+nombre+'/temporal'
+        print('Nombre: '+nombre)
         try:
             shutil.copy(direccion_origen, directorio_temporal)
             contenidos = os.listdir(directorio_temporal)
