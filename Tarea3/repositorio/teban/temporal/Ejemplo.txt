@@ -1,0 +1,18 @@
+public Pacientes(String pacCedula) {
+        this.pacCedula = pacCedula;
+    }
+    
+    public Pacientes(RegistroPacientesDto paciente) {
+        this.pacCedula = paciente.getPacCedula().toString();
+        actualizarPaciente(paciente);
+    }
+    public void actualizarPaciente(RegistroPacientesDto paciente){
+        this.pacCedula = paciente.getPacCedula().toString();
+        this.pacNombre = paciente.getPacNombre();
+        this.pacEdad = Long.valueOf(paciente.getPacEdad());
+        this.pacEnfermedades = paciente.getPacEnfermedades();
+        this.pacTratamientos = paciente.getPacTratamientos();
+        this.pacDireccion = paciente.getPacDireccion();
+        //this.pacNaciemiento = paciente.getPacNacimiento();
+
+    }

@@ -2,7 +2,9 @@ from PyQt5 import QtWidgets, uic,QtGui
 from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem
 import Funciones.Mensajes as sms
 from os import remove
+from Funciones.permisos import permiso
 import os
+import json
 import sys
 import shutil
 import Funciones.login as log
@@ -28,8 +30,8 @@ class carpeta():
             print("Se ha creado el directorio: %s " % directorio+" y sus carpetas hijas")
     
     def llenarTablaCarpetas(self,table,nombre):
-          directorio = 'repositorio'
-          contenidos=os.listdir(directorio)
+          table.clearContents()
+          contenidos = permiso.verificarPermisosUsuario(nombre) 
           us = 0
           for elemento in contenidos:
               table.setItem(us,0, QTableWidgetItem(contenidos[us]))
@@ -51,7 +53,7 @@ class carpeta():
         filaSeleccionada = tCarpetas.selectedItems()
         fila = filaSeleccionada[0].row()
         directorio = 'repositorio'
-        contenidosC=os.listdir(directorio) 
+        contenidosC= permiso.verificarPermisosUsuario(nombre) 
 
         usuario = contenidosC[fila]
 

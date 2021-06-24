@@ -60,11 +60,17 @@ class permiso:
                     sms.MessageBox(QtWidgets.QWidget).show_message(1,'Error','Lo sentimos, ya existe ese permiso')
 
     def verificarPermisosUsuario(nombre):
+        perm = []
+        ingresado = False
         with open('Usuarios/permisos.txt') as file:
             data = json.load(file)
             for permiso in data['permisos']:
                 if(permiso['nombreInvitado']==nombre):
-                    
-                    break
+                    perm.append(permiso['nombreDueno'])
                 else:
-                    print("No autenticado")
+                    if ingresado == False:
+                      perm.append(nombre)  
+                      ingresado = True  
+
+        return perm
+        
